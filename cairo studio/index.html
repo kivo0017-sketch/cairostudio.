@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Cairo Studio | تصميم مواقع وهوية وإعلانات وسوشيال ميديا</title>
+<meta name="description" content="Cairo Studio: مواقع، لوجو وهوية، منيو، بوسترات، إعلانات، ومحتوى سوشيال ميديا لمشروعك.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800;900&family=Cinzel:wght@500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0D0D0D; --gold:#D4AF37; --gold-soft:#F1D77A; --gold-deep:#A8841F; --paper:#F5F1E8; --mute:#9A968C;
+  --line:rgba(212,175,55,.32);
+  color-scheme:dark;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--ink);color:var(--paper);font-family:"Cairo",Tahoma,"Segoe UI",sans-serif;line-height:1.8;font-size:1.05rem;overflow-x:hidden}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--gold-soft);outline-offset:4px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+.brand{font-family:"Cinzel",Georgia,"Times New Roman",serif;color:var(--gold);letter-spacing:.32em;direction:ltr;font-weight:700}
+
+header{display:flex;justify-content:space-between;align-items:center;padding:26px 0;position:relative;z-index:2}
+header nav{display:flex;gap:28px;font-size:.95rem}
+header nav a{text-decoration:none;color:var(--mute);transition:color .2s}
+header nav a:hover{color:var(--gold-soft)}
+
+.hero{position:relative;overflow:hidden;isolation:isolate}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(520px circle at var(--x,30%) var(--y,35%),rgba(212,175,55,.22),transparent 65%)}
+.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center;padding:40px 0 88px}
+.hero h1{margin:0;direction:ltr;text-align:right;font-family:"Cinzel",Georgia,serif;font-weight:900;line-height:.95;font-size:clamp(3.6rem,11.5vw,8.2rem);letter-spacing:.05em;
+  background:linear-gradient(100deg,var(--gold-deep) 20%,var(--gold-soft) 45%,#fff6d6 50%,var(--gold-soft) 55%,var(--gold-deep) 80%);background-size:250% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;animation:sheen 5s ease-in-out infinite}
+.hero h1 span{display:block;font-weight:500;font-size:.32em;letter-spacing:.75em;margin-top:.45em}
+@keyframes sheen{0%{background-position:100% 0}60%,100%{background-position:0 0}}
+.hero .lead{margin:30px 0 14px;font-size:clamp(1.6rem,3.6vw,2.5rem);font-weight:900;line-height:1.35;max-width:18ch}
+.hero .sub{margin:0 0 36px;max-width:40ch;color:var(--mute)}
+.btn{display:inline-block;padding:15px 38px;border:2px solid var(--gold);color:var(--ink);background:var(--gold);font-weight:800;text-decoration:none;transition:background .2s,color .2s,transform .2s}
+.btn:hover{background:transparent;color:var(--gold-soft);transform:translateY(-2px)}
+.btn.ghost{background:transparent;color:var(--gold-soft);margin-inline-start:12px}
+.btn.ghost:hover{background:var(--gold);color:var(--ink)}
+.mark{width:100%;height:auto;max-width:380px;justify-self:center;filter:drop-shadow(0 0 22px rgba(212,175,55,.28))}
+.mark *{fill:none;stroke:var(--gold);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.mark .d{stroke-dasharray:1;stroke-dashoffset:1;animation:draw 2.4s ease-out .2s forwards}
+.mark .rays{transform-box:fill-box;transform-origin:center;animation:spin 40s linear infinite;stroke:var(--gold-soft);stroke-width:1;opacity:.8}
+.mark .sun{stroke:var(--gold-soft)}
+@keyframes draw{to{stroke-dashoffset:0}}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+.ticker{background:var(--gold);color:var(--ink);overflow:hidden;direction:ltr;border-block:2px solid var(--gold-soft);transform:rotate(-1.2deg);margin:0 -20px}
+.ticker div{display:flex;width:max-content;animation:run 40s linear infinite}
+.ticker span{padding:12px 26px;font-weight:900;font-size:1.15rem;white-space:nowrap}
+.ticker span::after{content:"▲";margin-inline-start:52px;font-size:.7rem;vertical-align:middle}
+@keyframes run{to{transform:translateX(-50%)}}
+
+section{padding:96px 0 40px}
+h2{margin:0 0 44px;font-size:clamp(2rem,4.6vw,3.2rem);font-weight:900;line-height:1.25}
+h2 em{font-style:normal;color:var(--gold)}
+.group{margin-bottom:56px}
+.group>h3{margin:0 0 6px;font-size:1.05rem;color:var(--gold);font-weight:800}
+.row{display:grid;grid-template-columns:minmax(200px,1fr) 2fr;gap:6px 48px;padding:22px 18px;border-top:1px solid var(--line);transition:background .25s,color .25s,padding .25s}
+.group .row:last-child{border-bottom:1px solid var(--line)}
+.row h4{margin:0;font-size:1.55rem;font-weight:800;color:var(--gold-soft);transition:color .25s}
+.row p{margin:0;max-width:56ch;color:var(--paper);transition:color .25s}
+@media (hover:hover){
+  .row:hover{background:var(--gold);padding-inline:30px}
+  .row:hover h4,.row:hover p{color:var(--ink)}
+}
+
+.steps{display:grid;grid-template-columns:repeat(3,1fr);counter-reset:s}
+.step{counter-increment:s;padding:6px 28px;border-inline-start:1px solid var(--line)}
+.step:first-child{border-inline-start:0;padding-inline-start:0}
+.step::before{content:counter(s);display:block;font-family:"Cinzel",Georgia,serif;font-size:4rem;font-weight:900;color:var(--gold);line-height:1;margin-bottom:10px}
+.step h3{margin:0 0 6px;font-size:1.3rem}
+.step p{margin:0;color:var(--mute)}
+
+.cta{background:var(--gold);color:var(--ink);text-align:center;padding:96px 24px;margin-top:96px;position:relative;overflow:hidden}
+.cta h2{margin:0 auto 18px;max-width:16ch;font-size:clamp(2.2rem,6vw,4.4rem)}
+.cta h2 em{color:var(--ink);text-decoration:underline;text-decoration-thickness:4px;text-underline-offset:10px}
+.cta p{margin:0 auto 34px;max-width:44ch;font-weight:600}
+.cta .btn{background:var(--ink);border-color:var(--ink);color:var(--gold-soft);font-size:1.15rem;padding:16px 44px}
+.cta .btn:hover{background:transparent;color:var(--ink)}
+footer{padding:28px 0 40px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;color:var(--mute);font-size:.9rem}
+
+.fab{display:none}
+@media (max-width:760px){
+  .fab{display:flex;align-items:center;justify-content:center;position:fixed;inset-inline:16px;bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:50;min-height:54px;background:var(--gold);color:var(--ink);border:2px solid var(--gold-soft);font-weight:900;font-size:1.1rem;text-decoration:none;box-shadow:0 8px 28px rgba(0,0,0,.65)}
+  body{padding-bottom:88px}
+  section{padding:64px 0 24px}
+  .cta{padding:72px 20px;margin-top:64px}
+  .hero-grid{grid-template-columns:1fr;padding:12px 0 64px}
+  .mark{max-width:210px;order:-1}
+  .row{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr;gap:26px}
+  .step,.step:first-child{border:0;border-top:1px solid var(--line);padding:20px 0 0}
+  .step:first-child{border-top:0;padding-top:0}
+  header nav{display:none}
+  header .brand{font-size:.9rem;letter-spacing:.24em}
+  .btn{display:block;text-align:center}
+  .hero .btn{margin:0 0 12px}
+  .hero .btn.ghost{margin-inline-start:0}
+}
+@media (prefers-reduced-motion:reduce){
+  .hero h1,.ticker div,.mark .rays{animation:none}
+  .mark .d{animation:none;stroke-dashoffset:0}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+<div class="hero" id="top">
+  <div class="wrap">
+    <header>
+      <span class="brand">CAIRO STUDIO</span>
+      <nav aria-label="التنقل">
+        <a href="#services">الخدمات</a>
+        <a href="#process">طريقة الشغل</a>
+        <a href="#contact">تواصل معنا</a>
+      </nav>
+    </header>
+    <div class="hero-grid">
+      <div>
+        <h1>CAIRO<span>STUDIO</span></h1>
+        <p class="lead">خلّي مشروعك أول حاجة العميل يشوفها.</p>
+        <p class="sub">موقع، لوجو، منيو، بوسترات، إعلانات ومحتوى سوشيال ميديا. كل اللي مشروعك محتاجه عشان يظهر بشكل محترف، عند ناس واحدة.</p>
+        <a class="btn" href="#contact">ابدأ مشروعك</a>
+        <a class="btn ghost" href="#services">شوف الخدمات</a>
+      </div>
+      <svg class="mark" viewBox="0 0 200 200" role="img" aria-label="هرم وقرص شمس بخطوط ذهبية">
+        <g class="rays">
+          <path d="M100 8v14M100 102v14M8 62h14M178 62h14M35 -3l8 12M165 -3l-8 12M35 127l8-12M165 127l-8-12M70 15l4 13M130 15l-4 13M70 109l4-13M130 109l-4-13" transform="translate(0 0)"/>
+        </g>
+        <circle class="d sun" pathLength="1" cx="100" cy="62" r="34"/>
+        <path class="d" pathLength="1" d="M18 172 L100 38 L182 172 Z"/>
+        <path class="d" pathLength="1" d="M59 172 L100 105 L141 172"/>
+        <path class="d" pathLength="1" d="M8 172 H192"/>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<div class="ticker" aria-hidden="true"><div id="tk"></div></div>
+
+<div class="wrap">
+  <main>
+    <section id="services">
+      <h2>كل اللي مشروعك محتاجه، <em>في مكان واحد</em></h2>
+
+      <div class="group">
+        <h3>الهوية والتصميم</h3>
+        <div class="row"><h4>لوجو وهوية بصرية</h4><p>لوجو وألوان وخطوط تخلّي مشروعك ينفع يتعرف عليه من أول نظرة.</p></div>
+        <div class="row"><h4>منيو مطاعم وكافيهات</h4><p>منيو مرتب وجذاب للطباعة وللعرض على الموبايل، بيخلّي الزبون يطلب أكتر.</p></div>
+        <div class="row"><h4>كروت وبروشورات وفلايرز</h4><p>مطبوعات بتسلّمها لعميلك وتفضل في إيده، بتصميم واضح وجاهز للطباعة.</p></div>
+        <div class="row"><h4>بوسترات</h4><p>بوسترات للعروض والمنتجات والمناسبات، سهلة القراءة على الشاشة وعلى الورق.</p></div>
+        <div class="row"><h4>عروض تقديمية PowerPoint</h4><p>عروض مرتبة لأصحاب الشركات والطلبة، بتوصّل الفكرة من غير زحمة.</p></div>
+        <div class="row"><h4>سيرة ذاتية CV</h4><p>سيرة ذاتية نضيفة ومنظمة، بتخلّي صاحب الشغل يكمل قراءة لآخرها.</p></div>
+      </div>
+
+      <div class="group">
+        <h3>السوشيال والإعلانات</h3>
+        <div class="row"><h4>تصميم الإعلانات</h4><p>صورة قوية، وجملة قصيرة، وزرار واضح يقول للعميل يعمل إيه.</p></div>
+        <div class="row"><h4>ترويج المنشورات</h4><p>نجهّز المنشور وننشره وندير الإعلان الممول، ونراجع معاك النتائج.</p></div>
+        <div class="row"><h4>كتابة المحتوى والكابشنز</h4><p>كلام مكتوب بأسلوب مشروعك، بيشرح المنتج ويشجّع على الشراء.</p></div>
+        <div class="row"><h4>تعديل صور المنتجات</h4><p>تنضيف الخلفية وتظبيط الإضاءة والألوان عشان المنتج يبان بأحسن شكل.</p></div>
+      </div>
+
+      <div class="group">
+        <h3>المواقع والمتاجر</h3>
+        <div class="row"><h4>تصميم المواقع</h4><p>مواقع تعريفية سريعة وشغالة على الموبايل، بتعرّف الزائر بمشروعك وتخليه يتواصل معاك.</p></div>
+        <div class="row"><h4>إعداد متجر إلكتروني</h4><p>متجر على Shopify أو WooCommerce، جاهز تضيف عليه منتجاتك وتبدأ تبيع.</p></div>
+        <div class="row"><h4>كتالوج واتساب بيزنس</h4><p>منتجاتك بأسعارها وصورها جوه واتساب، والعميل يطلب منك مباشرة.</p></div>
+      </div>
+    </section>
+
+    <section id="process">
+      <h2>إزاي <em>بنشتغل</em> معاك</h2>
+      <div class="steps">
+        <div class="step"><h3>نسمعك</h3><p>تحكيلنا عن مشروعك وعملائك وإيه اللي عايز تحققه.</p></div>
+        <div class="step"><h3>نصمم</h3><p>نبعتلك التصميم الأول، وتعدّل عليه لحد ما يعجبك.</p></div>
+        <div class="step"><h3>نسلّم وننشر</h3><p>نسلّمك الملفات النهائية، ولو عايز ننشر ونروّج بدالك.</p></div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<section id="contact" class="cta">
+  <h2>عندك مشروع؟ <em>كلمنا</em> النهارده</h2>
+  <p>ابعتلنا فكرتك على واتساب، ونرد عليك بعرض وسعر واضح قبل ما نبدأ.</p>
+  <a class="btn" href="https://wa.me/20XXXXXXXXXX">كلمنا على واتساب</a>
+</section>
+
+<div class="wrap">
+  <footer>
+    <span class="brand">CAIRO STUDIO</span>
+    <span>© 2026 Cairo Studio. كل الحقوق محفوظة.</span>
+  </footer>
+</div>
+
+<a class="fab" href="https://wa.me/20XXXXXXXXXX">كلمنا على واتساب</a>
+<script>
+(function(){
+  var items=["لوجو وهوية","منيو","بوسترات","إعلانات","مواقع","متاجر إلكترونية","كتالوج واتساب","كتابة محتوى","صور منتجات","عروض PowerPoint","سيرة ذاتية","سوشيال ميديا"];
+  var html=items.map(function(t){return "<span>"+t+"</span>"}).join("");
+  document.getElementById("tk").innerHTML=html+html;
+  var h=document.querySelector(".hero");
+  h.addEventListener("pointermove",function(e){
+    var r=h.getBoundingClientRect();
+    h.style.setProperty("--x",(e.clientX-r.left)+"px");
+    h.style.setProperty("--y",(e.clientY-r.top)+"px");
+  });
+})();
+</script>
+</body>
+</html>
